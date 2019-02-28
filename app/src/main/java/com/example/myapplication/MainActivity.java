@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     public Button login;
     protected EditText username;
     protected EditText password;
@@ -20,16 +20,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
 
-        login.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.LoginProceed:
-                    if (username.getTextSize()>0){
-                        Toast.makeText(this, username.getText(), Toast.LENGTH_SHORT);
-                    }
-            }
     }
 }
